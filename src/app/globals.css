@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #1B2A4A;
+  --color-accent: #B87333;
+  --color-bg: #F8F7F4;
+  --color-surface: #FFFFFF;
+  --color-text: #1A1A2E;
+  --color-muted: #6B7280;
+  --color-border: #E5E7EB;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Be Vietnam Pro', 'Inter', sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2A3D66;
+}
+
+/* Selection color */
+::selection {
+  background: rgba(184, 115, 51, 0.2);
+  color: var(--color-primary);
+}
+
+/* Smooth image loading */
+img {
+  transition: opacity 0.3s ease;
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 
+           bg-primary text-white font-semibold 
+           px-6 py-3 rounded-lg
+           transition-all duration-200 
+           hover:bg-primary-light hover:scale-[1.03] hover:shadow-lg
+           active:scale-[0.98]
+           min-h-[44px] min-w-[44px];
+  }
+
+  .btn-accent {
+    @apply inline-flex items-center justify-center gap-2 
+           bg-accent text-white font-semibold 
+           px-6 py-3 rounded-lg
+           transition-all duration-200 
+           hover:bg-accent-light hover:scale-[1.03] hover:shadow-lg
+           active:scale-[0.98]
+           min-h-[44px] min-w-[44px];
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 
+           border-2 border-primary text-primary font-semibold 
+           px-6 py-3 rounded-lg bg-transparent
+           transition-all duration-200 
+           hover:bg-primary hover:text-white hover:scale-[1.03] hover:shadow-lg
+           active:scale-[0.98]
+           min-h-[44px] min-w-[44px];
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 
+           hover:-translate-y-1 hover:shadow-xl;
+  }
+
+  .gradient-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/30 to-transparent;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-accent to-accent-light bg-clip-text text-transparent;
+  }
+
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-lg;
+  }
+}
+
+/* Zalo button pulse animation */
+@keyframes zalo-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(0, 106, 255, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(0, 106, 255, 0);
+  }
+}
+
+.zalo-pulse {
+  animation: zalo-pulse 2s ease-in-out infinite;
+}
