@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import PropertyFilter from "@/components/listings/PropertyFilter";
 import PropertyGrid from "@/components/listings/PropertyGrid";
@@ -24,7 +24,7 @@ const defaultFilters: Filters = {
   bedrooms: "",
 };
 
-export default function ListingsPage() {
+function ListingsContent() {
   const searchParams = useSearchParams();
   const [filters, setFilters] = useState<Filters>(() => {
     return {
@@ -85,5 +85,19 @@ export default function ListingsPage() {
         <PropertyGrid properties={filteredProperties} />
       </div>
     </div>
+  );
+}
+
+export default function ListingsPage() {
+  return (
+    <Suspense 
+      fallback={
+        <div className="pt-20 md:pt-24 pb-16 bg-background min-h-screen flex items-center justify-center">
+          <div className="text-muted">Đang tải...</div>
+        </div>
+      }
+    >
+      <ListingsContent />
+    </Suspense>
   );
 }
