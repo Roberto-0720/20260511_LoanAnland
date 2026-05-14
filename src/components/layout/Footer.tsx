@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Phone, Mail, MapPin, Facebook } from "lucide-react";
+import { Phone, MapPin, Facebook } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -14,8 +14,8 @@ export default function Footer() {
               Chuyên tâm từng căn — An cư vững bước
             </p>
             <p className="text-white/70 text-sm leading-relaxed">
-              Chuyên bất động sản khu vực Anland Nam Cường & The Charm An Hưng,
-              Hà Đông, Hà Nội.
+              Chuyên bất động sản khu vực Anland Nam Cường & The Charm An Hưng,{" "}
+              <span className="whitespace-nowrap">Hà Nội.</span>
             </p>
           </div>
 
@@ -51,15 +51,23 @@ export default function Footer() {
             <ul className="space-y-2.5">
               <li>
                 <Link
-                  href="/listings?project=anland-nam-cuong"
+                  href="/du-an/anland-lakeview"
                   className="text-white/70 hover:text-accent transition-colors text-sm"
                 >
-                  Anland Nam Cường
+                  Anland Lakeview
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/listings?project=the-charm-an-hung"
+                  href="/du-an/anland-premium"
+                  className="text-white/70 hover:text-accent transition-colors text-sm"
+                >
+                  Anland Premium
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/du-an/the-charm-an-hung"
                   className="text-white/70 hover:text-accent transition-colors text-sm"
                 >
                   The Charm An Hưng
@@ -115,7 +123,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-3 text-white/70 text-sm">
                 <MapPin size={16} className="text-accent mt-0.5 flex-shrink-0" />
-                <span>Khu đô thị An Hưng, Hà Đông, Hà Nội</span>
+                <span>Khu đô thị Dương Nội & An Hưng,{" "}<span className="whitespace-nowrap">Hà Nội</span></span>
               </li>
             </ul>
           </div>

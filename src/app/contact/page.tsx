@@ -100,7 +100,7 @@ export default function ContactPage() {
                     <div>
                       <p className="text-xs text-white/50 mb-0.5">Khu vực</p>
                       <p className="font-medium">
-                        KĐT An Hưng, Hà Đông, Hà Nội
+                        Khu đô thị Dương Nội, An Hưng, Hà Đông, Hà Nội
                       </p>
                     </div>
                   </div>

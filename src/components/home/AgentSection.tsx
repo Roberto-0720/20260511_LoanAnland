@@ -70,8 +70,8 @@ export default function AgentSection() {
               <p className="text-muted leading-relaxed mb-6">
                 Chuyên tư vấn mua bán, cho thuê căn hộ tại{" "}
                 <strong className="text-primary">Anland Nam Cường</strong> và{" "}
-                <strong className="text-primary">The Charm An Hưng</strong> — hai dự
-                án đẳng cấp nhất khu vực An Hưng, Hà Đông.
+                <strong className="text-primary">The Charm An Hưng</strong> — những dự
+                án đẳng cấp bậc nhất Hà Đông, Hà Nội.
               </p>
             </ScrollAnimation>
 

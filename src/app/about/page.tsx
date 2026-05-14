@@ -129,7 +129,7 @@ export default function AboutPage() {
               <div className="prose prose-lg max-w-none text-text-primary">
                 <p className="leading-relaxed mb-4">
                   Tôi bắt đầu bước vào lĩnh vực bất động sản từ năm 2019. Ngay từ
-                  những ngày đầu, tôi đã chọn khu vực An Hưng, Hà Đông làm "địa bàn"
+                  những ngày đầu, tôi đã chọn khu vực Hà Đông làm "địa bàn"
                   chính vì nhận thấy tiềm năng phát triển rất lớn của khu vực này.
                 </p>
                 <p className="leading-relaxed mb-4">
